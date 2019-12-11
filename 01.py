@@ -15,14 +15,13 @@ masses = [int(mass) for mass in masses]
 
 # Sum and return the total fuel mass
 totalMass = sum(masses)
-print(int(totalMass))
+print(f'Solution 1: {int(totalMass)}')
 
 # Part 2: Find the fuel required to convey that fuel, recursively
 
 
 def calculate_fuel_for_fuel(mass):
     fuel_mass = calculate_fuel(mass)
-    print(fuel_mass)
 
     if fuel_mass <= 0:
         return 0
@@ -35,4 +34,4 @@ for mass in masses:
     fuel_masses.append(mass + fuel_mass)
 
 
-print(sum(fuel_masses))
+print(f'Solution 2: {sum(fuel_masses)}')
